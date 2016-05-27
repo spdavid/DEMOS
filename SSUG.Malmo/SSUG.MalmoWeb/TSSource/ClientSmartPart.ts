@@ -30,4 +30,23 @@ namespace ClientSmartParts {
         }
 
     }
+
+    export class ViewListsPart {
+
+        static Init() {
+          
+
+            SP.SOD.executeOrDelayUntilScriptLoaded(function () {
+                var ctx = SP.ClientContext.get_current();
+                var lists = ctx.get_web().get_lists();
+
+                ctx.load(lists);
+                ctx.executeQueryAsync(function () {
+                    // success
+                    console.log(lists);
+                });
+            }, "sp.js");
+          
+        }
+    }
 }

@@ -115,5 +115,22 @@ var ClientSmartParts;
         return AnouncementsPart;
     }());
     ClientSmartParts.AnouncementsPart = AnouncementsPart;
+    var ViewListsPart = (function () {
+        function ViewListsPart() {
+        }
+        ViewListsPart.Init = function () {
+            SP.SOD.executeOrDelayUntilScriptLoaded(function () {
+                var ctx = SP.ClientContext.get_current();
+                var lists = ctx.get_web().get_lists();
+                ctx.load(lists);
+                ctx.executeQueryAsync(function () {
+                    // success
+                    console.log(lists);
+                });
+            }, "sp.js");
+        };
+        return ViewListsPart;
+    }());
+    ClientSmartParts.ViewListsPart = ViewListsPart;
 })(ClientSmartParts || (ClientSmartParts = {}));
 //# sourceMappingURL=main.js.map

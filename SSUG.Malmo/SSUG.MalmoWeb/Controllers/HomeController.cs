@@ -26,6 +26,8 @@ namespace SSUG.MalmoWeb.Controllers
                     ctx.Site.AddJsLink("mainjs", rootAppUrl + "/scripts/zalo/main.js", 0);
 
                     Helpers.ScriptEditorDeployment.DeploySmartPart(ctx.Site, "Announcements", "", "Announcements.html", "Zalo");
+                    Helpers.ScriptEditorDeployment.DeploySmartPart(ctx.Site, "ViewLists", "", "ViewLists.html", "Zalo");
+
                     spUser = ctx.Web.CurrentUser;
 
                     ctx.Load(spUser, user => user.Title);
