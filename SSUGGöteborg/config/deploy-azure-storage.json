@@ -1,0 +1,6 @@
+{
+  "workingDir": "./temp/deploy/",
+  "account": "<!-- STORAGE ACCOUNT NAME -->",
+  "container": "ssug-2",
+  "accessKey": "<!-- ACCESS KEY -->"
+}

@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "ssug-2-client-side-solution",
+    "id": "3171f192-f1f3-44f5-bf2b-9eacdcd68354",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/ssug-2.spapp"
+  }
+}
